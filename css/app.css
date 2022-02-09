@@ -1,0 +1,453 @@
+@font-face {
+  font-family: 'SeoulNamsan-CL';
+  src: url("../SeoulFont/SeoulNamsan-CL.ttf.woff") format("woff"), url("../SeoulFont/SeoulNamsan-CL.ttf.svg#SeoulNamsan-CL") format("svg"), url("../SeoulFont/SeoulNamsan-CL.ttf.eot"), url("../SeoulFont/SeoulNamsan-CL.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+p {
+  color: white;
+}
+
+h2 {
+  color: white;
+  font-size: 48px;
+  font-family: 'Fanwood Text', serif;
+}
+
+a {
+  color: #DD8433;
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  color: white;
+}
+
+i {
+  color: white;
+}
+
+li {
+  list-style: none;
+  color: white;
+}
+
+.button {
+  text-decoration: none;
+  padding: 10px;
+  border: #DD8433 solid 1px;
+  border-radius: 10px;
+  width: 404px;
+}
+
+.button:hover {
+  border: #C86000 solid 1px;
+  color: #c86000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.bg-hero {
+  background: url("../img/bg-hero.png") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 40px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.nav * {
+  z-index: 10;
+}
+
+.nav::after {
+  content: '';
+  background: black;
+  opacity: 50%;
+  position: absolute;
+  width: 100vw;
+  height: 55px;
+  top: 0;
+  left: 0;
+}
+
+li:hover {
+  background: #040202;
+  cursor: pointer;
+  color: #DD8433;
+}
+
+li {
+  padding: 10px;
+}
+
+.action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 100%;
+}
+
+.ads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 381px;
+  height: 498px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ads .text-container {
+  padding-top: 60px;
+}
+
+.ads p {
+  font-family: 'SeoulNamsan-CL';
+  font-size: 48px;
+  letter-spacing: 3px;
+  padding: 5px;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.ads a {
+  width: 150px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row .selected {
+  background: url("../img/IMG_5001.JPG") no-repeat center center/cover;
+  width: 300px;
+  height: 400px;
+  z-index: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.row .colum-left {
+  background: url("../img/IMG_5001.JPG") no-repeat center center/cover;
+  width: 243px;
+  height: 302px;
+  z-index: 0;
+  position: relative;
+  left: 110px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.row .colum-right {
+  background: url("../img/IMG_5001.JPG") no-repeat center center/cover;
+  width: 243px;
+  height: 302px;
+  z-index: 0;
+  position: relative;
+  right: 110px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.testimonials {
+  width: 100%;
+  height: 472px;
+}
+
+.testimonial-bg {
+  background: #13181A;
+  width: 100%;
+  height: 100%;
+}
+
+.about {
+  height: 663px;
+  width: 100%;
+}
+
+.about-bg {
+  width: 100%;
+  height: 100%;
+  background: #6F7173;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-container {
+  background: url("../img/222051739_191800856295366_3295222320655558933_n.jpg") no-repeat bottom 20% center/cover;
+  position: relative;
+  width: 874.26px;
+  height: 502px;
+  z-index: 0;
+}
+
+.about-content {
+  padding-top: 40px;
+  width: 708px;
+  height: 401px;
+  position: relative;
+  left: 10px;
+  background: #13181A;
+  -webkit-box-shadow: 0px 4px 13px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 13px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  text-align: center;
+}
+
+.about-content .content {
+  font-family: 'Roboto Slab', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-top: 30px;
+}
+
+.about-content .wrap-content {
+  width: 356px;
+  height: 269px;
+  margin: 0 auto;
+}
+
+.about-content h3 {
+  font-size: 36px;
+  line-height: 36px;
+  padding-top: 10px;
+  font-family: 'Fanwood Text', serif;
+}
+
+.bg-contact {
+  height: 516px;
+  background: #13181A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.time {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 360px;
+  height: 100%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto 0;
+}
+
+.time p {
+  font-family: 'Roboto Slab', serif;
+}
+
+.time-wrap {
+  padding-top: 30px;
+}
+
+.time-wrap p {
+  display: inline;
+}
+
+.socialmedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 278px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socialmedia i {
+  padding: 50px 30px;
+}
+
+.socialmedia p {
+  font-family: 'Roboto Slab', serif;
+}
+
+.contact-form {
+  width: 639px;
+  height: 412px;
+  background: linear-gradient(243.76deg, rgba(19, 24, 26, 0.2) 10.48%, rgba(0, 0, 0, 0) 100%), #6F7173;
+}
+
+.contact-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form .form-wrap {
+  width: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.contact-form input, .contact-form textarea {
+  margin: auto 0;
+  width: 95%;
+  background-color: white;
+}
+
+form {
+  position: relative;
+}
+
+form .button {
+  width: 150px;
+}
+
+button {
+  position: absolute;
+  bottom: 10%;
+  right: 2%;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+::-ms-input-placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+::placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+.product {
+  height: 55px;
+  width: 100%;
+  background: #13181A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product p {
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+}
+/*# sourceMappingURL=app.css.map */

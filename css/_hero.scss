@@ -1,0 +1,123 @@
+.bg-hero{
+    background: url('../img/bg-hero.png')no-repeat center center/cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+
+}
+
+.intro{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    align-items: baseline;
+
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    align-items: baseline;
+    z-index: 100;
+    overflow: hidden;
+    *{
+        z-index: 10;
+    }
+
+}
+.nav::after{
+    content: '';
+    background: black;
+    opacity: 50%;
+    position: absolute;
+    width: 100vw;
+    height: 55px;
+    top: 0;
+    left: 0;
+
+}
+
+li:hover{
+    background: #040202  ;
+    cursor: pointer;
+    color: $hover;
+
+}
+
+
+li{
+    padding: 10px;
+}
+
+.action{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.ads{
+    display: flex;
+    flex-direction: column;
+    width: 381px;
+    height: 498px;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    .text-container{
+        padding-top: 60px;
+    }
+    p{
+        font-family: 'SeoulNamsan-CL';
+        font-size: 48px;
+        letter-spacing: 3px;
+        padding: 5px;
+        line-height: 3rem;
+        text-align: center;
+    }
+    a{
+        width: 150px;
+        text-align: center;
+        margin-top: 50px;
+
+    }
+
+    
+}
+
+.row{
+    display: flex;
+
+    // width: 403px;
+    // height: 362px;
+    .selected{
+        background: url('../img/IMG_5001.JPG') no-repeat center center/cover;
+        width:300px ;
+        height: 400px;
+        z-index: 1;
+        object-fit: contain;
+    }
+    .colum-left{
+        background: url('../img/IMG_5001.JPG') no-repeat center center/cover;
+        width:243px ;
+        height: 302px;
+        z-index: 0;
+        position: relative;
+        left: 110px;
+        align-self: center;
+    }
+    .colum-right{
+        background: url('../img/IMG_5001.JPG') no-repeat center center/cover;
+        width:243px ;
+        height: 302px;
+        z-index: 0;
+        position: relative;
+        right: 110px;
+        align-self: center;
+    }
+    
+}
+
+
