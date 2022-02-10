@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 
 .time  {
@@ -44,6 +45,10 @@
 }
 
 .contact-form{
+    p{
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+    }
     width: 639px;
     height: 412px;
     background: linear-gradient(243.76deg, rgba(19, 24, 26, 0.2) 10.48%, rgba(0, 0, 0, 0) 100%), #6F7173;
@@ -63,14 +68,17 @@
         margin: auto 0;
         width: 95%;
         background-color : white; 
+        resize: none;
 
       }
+
 }
 form{
     position: relative;
     .button{
         width: 150px;
     }
+    
 }
 button{
     position: absolute;

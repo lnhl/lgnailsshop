@@ -369,6 +369,11 @@ li {
   background: linear-gradient(243.76deg, rgba(19, 24, 26, 0.2) 10.48%, rgba(0, 0, 0, 0) 100%), #6F7173;
 }
 
+.contact-form p {
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+}
+
 .contact-form form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -395,6 +400,7 @@ li {
   margin: auto 0;
   width: 95%;
   background-color: white;
+  resize: none;
 }
 
 form {
