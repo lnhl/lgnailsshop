@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Heather" ,
+        "comment": "Visiting from out of the area, so glad I went to this place! Super clean and friendly and got me in and out. Highly impressed with this place!",
+        "star":"5",
+        "img":"comment_img/Heather.png" 
+        
+    },
+    {
+        "Name": "T. B." ,
+        "comment": "Beautiful nail salon that is extremely clean and takes necessary precautions from Covid. Friendly staff from the time you enter to the time you leave. Reasonably priced. Definitely recommend.",
+        "star":"5",
+        "img":"comment_img/tb.png" 
+        
+    },
+    {
+        "Name": "Christinaa" ,
+        "comment": "The place is so clean and nice. Did a wonderful job on my nails best I have had..",
+        "star":"5",
+        "img":"comment_img/christinaa.jpg" 
+        
+    },
+    {
+        "Name": "Abbie Meekd" ,
+        "comment": "Wow!! Stopped in to this oasis for a lavender pedicure and tried a dip manicure w/ tips for the first time. Super impressed and the nail artists were so friendly and nice!! Can’t wait to come back.",
+        "star":"5",
+        "img":"comment_img/abbie.png" 
+    },
+    {
+        "Name": "Hayley F" ,
+        "comment": "Really great experience so I had to share in a review! Both mani and pedi were easily 10/10. Regular pedi and a Shellac manicure - will absolutely be back.",
+        "star":"5",
+        "img":"comment_img/haleyf.jpg" 
+    },
+    {
+        "Name": "cheryl barenberg" ,
+        "comment": "Very nice/new nail salon.  Neat, clean and very nice techs. Will go again.",
+        "star":"5",
+        "img":"comment_img/chryl.png" 
+    }
+
+]

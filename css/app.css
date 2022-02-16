@@ -125,8 +125,18 @@ li:hover {
   color: #DD8433;
 }
 
+li:hover a {
+  color: #DD8433;
+}
+
 li {
   padding: 10px;
+}
+
+li a {
+  font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+  color: white;
 }
 
 .action {
@@ -221,12 +231,107 @@ li {
 .testimonials {
   width: 100%;
   height: 472px;
+  background: #13181A;
 }
 
 .testimonial-bg {
-  background: #13181A;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 600px;
+  height: 350px;
+  background: #474A50;
+  position: relative;
+  left: 400px;
+  margin: 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 30px;
+  -webkit-transform: translateX(190%);
+          transform: translateX(190%);
+  -webkit-animation: move 43s linear infinite;
+          animation: move 43s linear infinite;
+}
+
+.comment .comment-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20px;
+}
+
+.comment .comment-left img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.comment .comment-left p {
+  color: white;
+  text-align: center;
+}
+
+.comment .comment-left i {
+  color: #fcb404;
+  width: 50px;
+  height: 50px;
+}
+
+.comment .comment-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment .comment-right p {
+  color: white;
+  text-align: left;
+  line-height: 1.7rem;
+}
+
+@-webkit-keyframes move {
+  to {
+    -webkit-transform: translateX(-880%);
+            transform: translateX(-880%);
+  }
+}
+
+@keyframes move {
+  to {
+    -webkit-transform: translateX(-880%);
+            transform: translateX(-880%);
+  }
 }
 
 .about {
@@ -382,9 +487,9 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -414,7 +519,7 @@ form .button {
 button {
   position: absolute;
   bottom: 10%;
-  right: 2%;
+  right: 4%;
 }
 
 ::-webkit-input-placeholder {
@@ -457,7 +562,7 @@ button {
   font-size: 14px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 810px) {
   .navbar {
     display: none;
   }
@@ -509,6 +614,7 @@ button {
     line-height: 1.1;
   }
   .about-bg .about-container {
+    background-position: 30% 60%;
     width: 100%;
     height: 502px;
   }

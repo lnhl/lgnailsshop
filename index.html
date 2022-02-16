@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
     <!-- jQuery 1.8 or later, 33 KB -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -34,16 +36,16 @@
                 </div>
                 <div class="contact">
                     <p>+1 (727)-442-6789</p>
-                    <a href="#">Call us</a>
+                    <a href="tel:+1-727-307-8835">Call us</a>
                 </div>
             </div>
             <div class="navbar">
                 <ul class="nav">
-                    <li>Home</li>
+                    <li><a href="#home">Home</a></li>
                     <li>Gallery</li>
                     <li>Services</li>
                     <li>Contact</li>
-                    <li>About</li>
+                    <li><a href="#about">About</a></li>
                 </ul>
             </div>
             <div class="action">
@@ -71,13 +73,30 @@
         </div>
     </section>
     <section class="testimonials">
+        <!-- <h1>What our custumer says</h1> -->
         <div class="testimonial-bg">
-            <div class="comment"></div>
+            <div class="comment">
+                <div class="comment-left">
+                    <img src="comment_img/unnamed.png" alt="here">
+                    <p class="comment-name">HELLO</p>
+                    <span class="start">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </span>
+                </div>
+                <div class="comment-right">
+                    <p class="comment-comment" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, enim laudantium. Aliquam rem vero qui. Quis, blanditiis. Possimus, aperiam tempore.</p>
+                </div>
+            </div>
+
         </div>
 
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
         <div class="about-bg">
             <div class="about-content">
                 <h3>Your Happiness Is Our Priority</h3>
@@ -108,9 +127,9 @@
             <div class="socialmedia">
                 <p>Follow Us</p>
                 <div class="social-container">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-google"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/lgnailsandspaclearwater" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.google.com/search?q=lg+nails+and+spa+clearwater+beach&client=firefox-b-1-d&sxsrf=APq-WBu91tMqh1iJyaye5vNkcAfPuDM8sA%3A1644981250388&ei=AmwMYr-OF4KPwbkPiYiUmAY&oq=lg+nails+and&gs_lcp=Cgdnd3Mtd2l6EAMYADIECCMQJzIHCCMQyQMQJzIQCC4QgAQQhwIQxwEQrwEQFDILCC4QgAQQxwEQrwEyBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BwgAEEcQsAM6CggAEEcQsAMQyQM6CAgAEJIDELADOgUIABCRAjoLCC4QxwEQrwEQkQI6DgguEIAEELEDEMcBEKMCOhEILhCABBCxAxCDARDHARDRAzoICAAQgAQQsQM6BQgAEIAEOhEILhCABBCxAxDHARCjAhDUAjoTCC4QgAQQhwIQsQMQxwEQ0QMQFDoECAAQQzoICAAQsQMQgwE6CwgAEIAEELEDEIMBOgoILhDHARCvARBDOgcIABCxAxBDOgcIABCABBAKSgQIQRgASgQIRhgAUMoIWLIVYNMcaAFwAXgBgAHAAYgBsAySAQQyLjEwmAEAoAEByAEIwAEB&sclient=gws-wiz" target = '_blank'><i class="fa-brands fa-google"></i></a>
+                    <a href="https://www.instagram.com/lgnailsspacw/" target="_blank" ><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
             <div class="contact-form">
@@ -118,8 +137,6 @@
                 <form >
          
                     <input id="Name" type="text" placeholder="Your Name">
-         
-      
                     <input id="phone" type="tel" placeholder="Your phone number">
           
                <textarea placeholder="Your Message" name="" id="msg" cols="28" rows="4"></textarea>
@@ -137,5 +154,8 @@
             <p>a product by @lnhl</p>
         </div>
     </footer>
+
+
+    <script src="./app.js"></script>
 </body>
 </html>
