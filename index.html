@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
     <!-- jQuery 1.8 or later, 33 KB -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>src="https://code.jquery.com/jquery-1.11.1.min.js"</script>
+ 
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
 
     <!-- Fotorama from CDNJS, 19 KB -->
     <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
@@ -26,13 +33,23 @@
     <title>LG nails shop</title>
 </head>
 <body>
+
+    <form id="direction" style="display: none;" action="http://maps.google.com/maps" method="get" target="_blank">
+        <label for="saddr">Enter your location</label>
+        <input type="text" name="saddr" />
+        <input type="hidden" name="daddr" value="132 Island Way, Clearwater, FL 33767" />
+        <input type="submit" value="Get directions" />
+     </form>
+
+    <div title="Get Direction to LG Nails and Spa ?" id="dialog" style="display: none;">
+        <p style="color: black;text-align: center;"> Do you want to use your current location ? </p></div>
     <section class="'hero" >
         <div class="bg-hero">
             <div class="intro">
                 <h2> LG Nails and Spa</h2>
                 <div class="location">
                     <p>132 Island Way, Clearwater, FL 33767</p>
-                    <a href="#">Get direction</a>
+                    <a id="get_dir" href="#">Get direction</a>
                 </div>
                 <div class="contact">
                     <p>+1 (727)-442-6789</p>
@@ -57,14 +74,33 @@
                 </div>
                 <div class="show-case" data-nav="thumbs">
                     <div class="fotorama"
-                        data-width="800"
-                        data-height="400">
-                        <img src="https://s.fotorama.io/1.jpg">
-                        <img src="https://s.fotorama.io/2.jpg">
-
-                        <div class="colum-left"></div>
-                        <div class=" selected"></div>
-                        <div class="colum-right"></div>
+                        data-width="500"
+                        data-height="500"
+                        data-ratio="800/600"
+                        data-minwidth="400"
+                        data-maxwidth="1000"
+                        data-minheight="300"
+                        data-maxheight="100%"
+                        data-ratio="600/900"
+                
+                        >
+                        
+                        <img style="width: 500px; height: 500px;" src="nails/232288698_204943078314477_612407375257681286_n.jpg"> 
+                        <img src="nails/231378337_204982051643913_6766431162610107750_n.jpg">
+                        <img src="nails/225786570_195375222604596_4534026959974775437_n.jpg">
+                        <img src="nails/220805773_190885373053581_4776060430199471624_n.jpg">
+                        <img src="nails/1_n.jpg">
+                        <img src="nails/2n.jpg">
+                        <img src="nails/175371522_130410542434398_762093476803023550_n.jpg">
+                        <img src="nails/182448102_138569561618496_6994123882254607424_n.jpg">
+                        <img src="nails/182987459_140129461462506_1488646252345463537_n.jpg">
+                        <img src="nails/183446973_140129438129175_999723966334805099_n.jpg">
+                        <img src="nails/182987459_140129461462506_1488646252345463537_n.jpg">
+                        <img src="nails/203715470_176505447824907_5879765763452844612_n.jpg">
+                        <img src="nails/205132465_171054385036680_246550419720643614_n.jpg">
+                        <img src="nails/217772213_185666926908759_6167838482701931702_n.jpg">
+                        <img src="nails/227013900_196135365861915_3517333014652542919_n.jpg">
+                        
 
                     </div>
 
@@ -136,8 +172,8 @@
                 <p>Leave us a Message</p>
                 <form >
          
-                    <input id="Name" type="text" placeholder="Your Name">
-                    <input id="phone" type="tel" placeholder="Your phone number">
+                    <input id="Name" type="text" placeholder="Your Name" required>
+                    <input id="phone" type="tel" placeholder="Your phone number" required> 
           
                <textarea placeholder="Your Message" name="" id="msg" cols="28" rows="4"></textarea>
                <button class="button">Submit</button>

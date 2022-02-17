@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://maps.google.com/maps" method="get" target="_blank">
+        <label for="saddr">Enter your location</label>
+        <input type="text" name="saddr" />
+        <input type="hidden" name="daddr" value="132 Island Way, Clearwater, FL 33767" />
+        <input type="submit" value="Get directions" />
+     </form>
+
+
+
+     <script>
+         function getLoca(){
+         const inform = document.forms[0]
+         const val = inform.querySelector('input[name="saddr"]')
+         val.value = '6048 110th ave n pinellas park fl'
+         inform.submit()
+         }
+         getLoca()
+     </script>
+</body>
+</html>

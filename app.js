@@ -38,3 +38,68 @@
 
 
 })()
+
+
+$(function() {
+    // this initializes the dialog (and uses some common options that I do)
+    $("#dialog").dialog({
+      modal : true, 
+      autoOpen: false,
+    
+      width:'600' ,
+      height:'300',
+      resizeable:false,
+      buttons: {
+        "Yes": function() {
+            var options = {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+              };
+              
+              function success(pos) {
+                var crd = pos.coords;
+                console.log(`Latitude : ${crd.latitude}`);
+                console.log(`Longitude: ${crd.longitude}`);
+                console.log(`More or less ${crd.accuracy} meters.`);
+
+                fetch(`https://api.myptv.com/geocoding/v1/locations/by-position/${crd.latitude}/${crd.longitude}?language=en`, {
+                method: "GET",
+                headers: { apiKey: "ZWI4MmVjYzJjYWM1NDM4Mjk0ZmZjZTUzYmZjNjhhOTA6YTk0MGY0NDktZWEyYy00YmEzLTgzY2YtZDIzMzBlN2Y3OTE5", "Content-Type": "application/json" },})
+                .then(response => response.json())
+                .then(result => {
+                    var form = document.forms[0];
+                    var selectElement = form.querySelector('input[name="saddr"]')
+                    selectElement.value = result.locations[0].formattedAddress
+                    form.submit()
+                    console.log(result.locations[0].formattedAddress);
+
+
+                } );
+
+
+              }
+              
+              function error(err) {
+                console.warn(`ERROR(${err.code}): ${err.message}`);
+              }
+              
+              navigator.geolocation.getCurrentPosition(success, error, options);
+              
+
+          $( this ).dialog( "close" );
+        },
+        'No': function() {
+            var form = document.forms[0];
+            form.submit()
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  
+    // next add the onclick handler
+    $("#get_dir").click(function() {
+      $("#dialog").dialog("open");
+      return false;
+    });
+  });
