@@ -8,7 +8,6 @@
     response.forEach(element => {
         const div = document.createElement('div')
         div.className = 'comment'
-        console.log(element);
         const left_cmt = document.createElement('div')
         left_cmt.className = 'comment-left'
         const right_cmt = document.createElement('div')
@@ -29,15 +28,14 @@
         div.appendChild(left_cmt)
         div.appendChild(right_cmt)
         parent.appendChild(div)
-
-        
-        
     });
 
 
 
 
+
 })()
+
 
 
 $(function() {
@@ -59,9 +57,6 @@ $(function() {
               
               function success(pos) {
                 var crd = pos.coords;
-                console.log(`Latitude : ${crd.latitude}`);
-                console.log(`Longitude: ${crd.longitude}`);
-                console.log(`More or less ${crd.accuracy} meters.`);
 
                 fetch(`https://api.myptv.com/geocoding/v1/locations/by-position/${crd.latitude}/${crd.longitude}?language=en`, {
                 method: "GET",
@@ -103,3 +98,45 @@ $(function() {
       return false;
     });
   });
+
+window.addEventListener('load',()=>{
+  document.body.scrollTop = 0
+  const nav = document.querySelector('.navbar')
+  const pos = nav.getBoundingClientRect()
+  document.body.addEventListener('scroll',()=>{
+    if(document.body.scrollTop > pos.top){
+      nav.style.position = 'fixed'
+      nav.style.top = 0
+      nav.style.width = '100%'
+      nav.style.zIndex = '101'
+    }
+    else{
+      nav.style.position = 'static'
+      nav.style.top = pos
+      nav.style.width = '100%'
+      nav.style.zIndex = '101'
+    }
+  
+  
+  })
+})
+
+$(document).ready(function(){
+  window.location.hash = ''
+
+// Add smooth scrolling 
+$("#navbar a").on('click', function(event) {
+if (this.hash !== "") {
+
+event.preventDefault();
+const hash = this.hash;
+
+
+$('html, body').animate({
+scrollTop: $(hash).offset().top
+}, 800,function(){
+window.location.hash = hash;}
+);
+} 
+});
+});

@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
@@ -43,7 +42,7 @@
 
     <div title="Get Direction to LG Nails and Spa ?" id="dialog" style="display: none;">
         <p style="color: black;text-align: center;"> Do you want to use your current location ? </p></div>
-    <section class="'hero" >
+    <section id="home" class="'hero" >
         <div class="bg-hero">
             <div class="intro">
                 <h2> LG Nails and Spa</h2>
@@ -56,12 +55,12 @@
                     <a href="tel:+1-727-307-8835">Call us</a>
                 </div>
             </div>
-            <div class="navbar">
+            <div id="navbar" class="navbar">
                 <ul class="nav">
                     <li><a href="#home">Home</a></li>
                     <li>Gallery</li>
                     <li>Services</li>
-                    <li>Contact</li>
+                    <li><a href="#contact">Contact</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
             </div>
@@ -89,14 +88,12 @@
                         <img src="nails/231378337_204982051643913_6766431162610107750_n.jpg">
                         <img src="nails/225786570_195375222604596_4534026959974775437_n.jpg">
                         <img src="nails/220805773_190885373053581_4776060430199471624_n.jpg">
-                        <img src="nails/1_n.jpg">
                         <img src="nails/2n.jpg">
                         <img src="nails/175371522_130410542434398_762093476803023550_n.jpg">
                         <img src="nails/182448102_138569561618496_6994123882254607424_n.jpg">
                         <img src="nails/182987459_140129461462506_1488646252345463537_n.jpg">
                         <img src="nails/183446973_140129438129175_999723966334805099_n.jpg">
                         <img src="nails/182987459_140129461462506_1488646252345463537_n.jpg">
-                        <img src="nails/203715470_176505447824907_5879765763452844612_n.jpg">
                         <img src="nails/205132465_171054385036680_246550419720643614_n.jpg">
                         <img src="nails/217772213_185666926908759_6167838482701931702_n.jpg">
                         <img src="nails/227013900_196135365861915_3517333014652542919_n.jpg">
@@ -111,22 +108,6 @@
     <section class="testimonials">
         <!-- <h1>What our custumer says</h1> -->
         <div class="testimonial-bg">
-            <div class="comment">
-                <div class="comment-left">
-                    <img src="comment_img/unnamed.png" alt="here">
-                    <p class="comment-name">HELLO</p>
-                    <span class="start">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </span>
-                </div>
-                <div class="comment-right">
-                    <p class="comment-comment" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, enim laudantium. Aliquam rem vero qui. Quis, blanditiis. Possimus, aperiam tempore.</p>
-                </div>
-            </div>
 
         </div>
 
@@ -145,8 +126,8 @@
             <div class="about-container"></div>
         </div>
     </section>
-
-    <section class="contact">
+    <div></div>
+    <section id="contact" class="contact">
         <div class="bg-contact">
             <div class="time">
                 <p class="head">Hours of Operation</p>
@@ -193,5 +174,29 @@
 
 
     <script src="./app.js"></script>
+    <script>
+        $(document).ready(function(){
+            window.location.hash = ''
+            scrollTop = 0
+  // Add smooth scrolling 
+  $("#navbar a").on('click', function(event) {
+
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+      const hash = this.hash;
+
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800,function(){
+    window.location.hash = hash;}
+      );
+    } 
+  });
+});
+
+    </script>
 </body>
 </html>
