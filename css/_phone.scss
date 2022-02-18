@@ -9,7 +9,7 @@
         text-align: center;
         height: 300px;
         .location , .contact{
-            display: none;
+            display: block;
         }
         h2{
             font-size: 40px;
@@ -27,6 +27,9 @@
                 font-size: 40px;
             }
         }
+    }
+    .show-case{
+        display: none;
     }
 
     .about-bg{

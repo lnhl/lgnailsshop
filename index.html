@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -174,29 +174,6 @@
 
 
     <script src="./app.js"></script>
-    <script>
-        $(document).ready(function(){
-            window.location.hash = ''
-            scrollTop = 0
-  // Add smooth scrolling 
-  $("#navbar a").on('click', function(event) {
 
-
-    if (this.hash !== "") {
-
-      event.preventDefault();
-      const hash = this.hash;
-
-
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800,function(){
-    window.location.hash = hash;}
-      );
-    } 
-  });
-});
-
-    </script>
 </body>
 </html>

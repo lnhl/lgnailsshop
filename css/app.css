@@ -586,7 +586,7 @@ button {
     height: 300px;
   }
   .intro .location, .intro .contact {
-    display: none;
+    display: block;
   }
   .intro h2 {
     font-size: 40px;
@@ -601,6 +601,9 @@ button {
   .ads .text-container p {
     line-height: 2rem;
     font-size: 40px;
+  }
+  .show-case {
+    display: none;
   }
   .about-bg {
     -webkit-box-orient: vertical;
